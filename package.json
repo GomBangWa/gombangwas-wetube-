@@ -1,0 +1,61 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "The best way to watch videos.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomadcoders/wetube-reloaded.git"
+  },
+  "scripts": {
+    "start": "node build/init.js",
+    "build": "npm run build:server && npm run build:assets",
+    "build:server": "babel src -d build",
+    "build:assets": "webpack --mode=production",
+    "dev:server": "nodemon",
+    "dev:assets": "webpack --mode=development"
+  },
+  "author": "Nicolas Serrano <nico@nomadcoders.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomadcoders/wetube-reloaded/issues"
+  },
+  "homepage": "https://github.com/nomadcoders/wetube-reloaded#readme",
+  "dependencies": {
+    "@ffmpeg/core": "^0.8.5",
+    "@ffmpeg/ffmpeg": "^0.9.7",
+    "aws-sdk": "^2.1231.0",
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.1",
+    "ffmpeg": "^0.0.4",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^3.0.1",
+    "node-fetch": "^2.6.1",
+    "pug": "^3.0.2",
+    "regenerator-runtime": "^0.13.7",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.2",
+    "mini-css-extract-plugin": "^1.5.0",
+    "nodemon": "^2.0.7",
+    "sass": "^1.32.10",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.5.4"
+  },
+  "devDependencies": {}
+}
